@@ -4,7 +4,7 @@
 
 provider "aws" {
   region  = var.aws_region
-  profile = "terraform"  # profil que tu utilises déjà localement
+  profile = "terraform" # profil que tu utilises déjà localement
 }
 
 #######################################
