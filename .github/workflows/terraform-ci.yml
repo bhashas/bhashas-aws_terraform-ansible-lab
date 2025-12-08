@@ -28,14 +28,13 @@ jobs:
           mkdir -p ~/.aws
           cat <<EOF > ~/.aws/credentials
           [terraform]
-          aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID_TERRAFORM }}
-          aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY_TERRAFORM }}
+          aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}
           EOF
           cat <<EOF > ~/.aws/config
           [profile terraform]
           region=${{ env.AWS_REGION }}
           EOF
-
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
