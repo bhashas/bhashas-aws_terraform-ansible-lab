@@ -29,3 +29,8 @@ terraform plan
 terraform apply
 terraform output
 Test CI
+# Projet Terraform + Ansible Lab
+
+Mise à jour du README (11/12/2025).
+
+Ce projet contient une infrastructure AWS créée avec Terraform et configurée via Ansible.
