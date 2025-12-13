@@ -1,26 +1,47 @@
 # Terraform + Ansible Lab (AWS EC2 + S3 Backend + CI/CD)
 
-Ce projet déploie :
+Ce projet démontre la mise en place d’une infrastructure AWS automatisée
+en combinant **Terraform**, **Ansible** et **GitHub Actions**.
 
-- Une VPC + Subnet public + Security Group
-- Une instance EC2 Ubuntu avec cloud-init
-- Un backend Terraform S3 + DynamoDB
-- Un playbook Ansible pour configurer la VM
-- Un pipeline GitHub Actions (Terraform + Ansible)
+L’objectif principal est de montrer une **approche infrastructure-as-code**
+structurée, reproductible et intégrée dans une chaîne CI/CD.
 
-## Structure
+---
 
-- terraform/ : Infra AWS (EC2, VPC, SG, backend distant)
-- ansible/   : Configuration de l’instance EC2
-- .github/workflows/ : CI/CD
+## 🚀 Ce que déploie le projet
 
-## Prérequis
+- Un **VPC AWS** avec :
+  - un subnet public
+  - un Security Group
+- Une **instance EC2 Ubuntu**
+  - provisionnée via **cloud-init**
+- Un **backend Terraform distant**
+  - S3 pour l’état
+  - DynamoDB pour le verrouillage
+- Un **playbook Ansible**
+  - pour la configuration post-provisioning de l’instance
+- Un **pipeline GitHub Actions**
+  - Terraform (init / plan / apply)
+  - Ansible
 
-- Un user IAM `terraform` avec clé d’accès
-- Profil AWS CLI `terraform` configuré sur ta machine
-- Bucket S3 + table DynamoDB (backend) déjà créés
+---
 
-## Commandes locales
+## 📁 Structure du projet
+
+
+
+---
+
+## 🔧 Prérequis
+
+- Un compte AWS
+- Un utilisateur IAM dédié `terraform` avec clés d’accès
+- AWS CLI configuré avec un profil nommé `terraform`
+- Un **bucket S3** et une **table DynamoDB** déjà créés (backend Terraform)
+
+---
+
+## ▶️ Commandes locales
 
 ```bash
 cd terraform
@@ -28,9 +49,3 @@ terraform init
 terraform plan
 terraform apply
 terraform output
-Test CI
-# Projet Terraform + Ansible Lab
-
-Mise à jour du README (11/12/2025).
-
-Ce projet contient une infrastructure AWS créée avec Terraform et configurée via Ansible.
