@@ -28,6 +28,10 @@ structurée, reproductible et intégrée dans une chaîne CI/CD.
 
 ## 📁 Structure du projet
 
+├── terraform/ # Infrastructure AWS (Terraform)
+├── ansible/ # Configuration de l’instance EC2
+├── .github/workflows/ # CI/CD GitHub Actions
+└── README.md
 
 
 ---
